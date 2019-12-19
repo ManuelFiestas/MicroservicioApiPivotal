@@ -10,5 +10,8 @@ public interface IClienteDao extends JpaRepository<Cliente, Long> {
 			
 	@Query(value = "SELECT AVG(edad) as promedio FROM cliente", nativeQuery = true)
 	double promedio();
+	
+	@Query(value = "SELECT STD(edad) FROM cliente", nativeQuery = true)
+    double d();
 
 }

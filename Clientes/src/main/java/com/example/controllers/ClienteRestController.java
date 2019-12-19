@@ -75,6 +75,14 @@ public class ClienteRestController {
 	    return map;
 	}
 	
+	@GetMapping("/desviacion")
+	public HashMap<String, Object> desviacionEstandar() {
+	    HashMap<String, Object> map = new HashMap<>();
+	    map.put("promedio", clienteService.promedio());
+	    map.put("desviacionEstandar", clienteService.d());
+	    return map;
+	}
+	
 
 	@GetMapping(value="/muerte")
 	@ResponseBody public ResponseEntity<Object> getAll() throws JSONException {

@@ -49,4 +49,16 @@ public class ClienteServiceImpl implements IClienteService {
 		return (int) clienteDao.count();
 	}
 
+	@Override
+	public double d() {
+		// TODO Auto-generated method stub
+		return clienteDao.d();
+	}
+
+	
+
+	
+	
+	
+
 }
